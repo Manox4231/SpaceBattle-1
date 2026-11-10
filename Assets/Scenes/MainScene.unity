@@ -332,6 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7bbaac4d6d94cc44ab3d6507cdc3492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParteInferior
+  gameController: {fileID: 329719311}
 --- !u!1 &329719310
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,7 +345,7 @@ GameObject:
   - component: {fileID: 329719311}
   m_Layer: 0
   m_Name: GameController
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -361,6 +362,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a38bb7a10f3fae4e940dd31ecefaf80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameController
+  score: 0
+  BossCounter: 0
+  vidas: 10
+  vidaBoss: 0
+  nave: {fileID: 416506120}
   spawns:
   - {fileID: 404099322}
   - {fileID: 1685619265}
@@ -369,6 +375,7 @@ MonoBehaviour:
   - {fileID: 1651760187}
   - {fileID: 661596228}
   enemySP: {fileID: 6679401591104088045, guid: 540f4d8d47f3ef241a5cbce2b0eb154f, type: 3}
+  enemyBoss: {fileID: 4072506164510430956, guid: e333d13266012ed499043129e75064a9, type: 3}
   Timer: 0
   CountTo: 3
 --- !u!4 &329719312
@@ -514,8 +521,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpaceshipScript
   gameController: {fileID: 329719311}
+  proyectil: {fileID: 8061679102070569302, guid: e0fcca971320cea468f52a5502840692, type: 3}
   speed: 3
-  ShootCooldown: 2
+  ShootCooldown: 1.25
   CanShoot: 1
 --- !u!50 &416506124
 Rigidbody2D:
@@ -1061,6 +1069,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1873222560}
   - component: {fileID: 1873222559}
+  - component: {fileID: 1873222561}
   m_Layer: 0
   m_Name: Techo
   m_TagString: Untagged
@@ -1129,6 +1138,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1873222561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873222558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d4876bd190d4dd4b88e872c38c12faf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ParteSuperior
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

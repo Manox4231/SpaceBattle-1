@@ -19,7 +19,7 @@ public class ParteSuperior : MonoBehaviour
         {
             Debug.Log("Se ha salido un proyectil por arriba");
 
-            Destroy(collision.transform.parent.gameObject);
+            Destroy(collision.gameObject);
         }
     }
 }
