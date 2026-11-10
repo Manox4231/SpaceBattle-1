@@ -18,7 +18,7 @@ public class ParteInferior : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            Debug.Log("Se ha salido");
+            Debug.Log("¡¡¡Se ha colado un enemigo!!!");
             
             Destroy(collision.transform.parent.gameObject);
         }
