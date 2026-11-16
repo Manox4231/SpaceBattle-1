@@ -20,7 +20,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         score = 0;
-        BossCounter = score;
+        BossCounter = 0;
         Timer = 0;
     }
 
