@@ -10,7 +10,6 @@ public class GameController : MonoBehaviour
     [SerializeField] public int vidas;
     [SerializeField] public int vidaBoss;
     [SerializeField] private GameObject nave;
-    [SerializeField] private Transform[] spawns;
     [SerializeField] public GameObject enemySP;
     [SerializeField] public GameObject enemyBoss;
     [SerializeField] float Timer;
@@ -36,7 +35,7 @@ public class GameController : MonoBehaviour
 
                 GameObject newEnemy = Instantiate(enemySP);//Crea la nave
 
-                newEnemy.transform.position = spawns[Random.Range(0, spawns.Length)].transform.position;//Posiciona la nave
+                newEnemy.transform.position = new Vector3 (Random.Range(-7f,7f), 10, 0);//Posiciona la nave
             }
             else if (Timer >= CountTo && BossCounter >= 10)
             {
@@ -46,7 +45,7 @@ public class GameController : MonoBehaviour
 
                 GameObject newBoss = Instantiate(enemyBoss);//Crea al jefe
 
-                newBoss.transform.position = spawns[Random.Range(0, spawns.Length)].transform.position;//Posiciona al jefe
+                newBoss.transform.position = new Vector3 (Random.Range(-7f,7f), 10, 0);//Posiciona al jefe
 
                 vidaBoss = 3;
             }

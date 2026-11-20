@@ -28,7 +28,6 @@ public class SpaceshipScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (Input.GetKey(KeyCode.Space) && CanShoot)//Disparo
         {
             GameObject Disparo = Instantiate(proyectil);
